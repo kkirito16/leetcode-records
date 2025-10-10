@@ -11,11 +11,11 @@
  * @return {number[]}
  */
 var successfulPairs = function(spells, potions, success) {
-  potions.sort((a, b    ) => a - b);
+  potions.sort((a, b) => a - b);
   const m = potions.length;
 
   function lowerBound(x) {
-    let l = 0, r = m; 
+    let l = 0, r = m;
     while (l < r) {
       const mid = (l + r) >> 1;
       if (potions[mid] >= x) r = mid;
